@@ -1,0 +1,204 @@
+
+  
+{% extends "base-site.html" %}
+    
+{% load static %}
+
+{% block content %}
+    
+    
+    <!-- Breadcrumb Area -->
+    <div class="breadcrumb-area" style="background-image:url({% static "assets/img/breadcrumb/01.png" %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h2 class="page-title">Actualité</h2>
+                        <ul class="page-list">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="#">File d'actualités</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- blog area start  -->
+    <section class="blog-area m-5 padding-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center margin-bottom-60">
+                        <span>Latest News</span>
+                        <h3 class="title">Have a look whats going on</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--<div class="col-lg-4">
+                    <div class="single-blog-grid-01 style-01">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/blog/01.png" %}" alt="blog image">
+                        </div>
+                        <div class="content">
+                            <ul class="post-meta">
+                                <li><a href="#"><span><em>By</em></span> Admin</a></li>
+                                <li class="date"><a href="#"><i class="flaticon-booking"></i>20 Dec 2019</a></li>
+                            </ul>
+                            <h4 class="title"><a href="#">Presidnetal Electon 2020</a></h4>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="col-lg-12">
+                    <div class="row">
+
+
+                        {% for new in news %}
+
+                            <div class="col-md-4">
+                                <div class="single-blog-grid-01">
+                                    <div class="thumb">
+                                        <img src="{{new.image.url}}" alt="blog image">
+                                    </div>
+                                    <div class="content">
+                                        <ul class="post-meta">
+                                            <li><a href="#"><span><em>By</em></span> {{new.author}}</a></li>
+                                            <li class="date"><a href="#"><i class="flaticon-booking"></i>{{new.created_at}}</a></li>
+                                        </ul>
+                                        <h4 class="title"><a href="{% url 'new_details' new.id %}">{{new.title}}</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog area end -->
+
+    <!--<div class="page-content our-attoryney padding-bottom-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog-classic-item-01 margin-bottom-60">
+                        <div class="thumbnail">
+                            <img src="assets/img/blog-single/01.png" alt="blog">
+                        </div>
+                        <div class="content">
+                            <ul class="post-meta">
+                                <li><a href="#"><i class="fa fa-user"></i> Admin</a></li>
+                                <li><a href="#"><i class="far fa-clock"></i> 11 Dec 2018</a></li>
+                            </ul>
+                            <h4 class="title"><a href="#">Reduce budget of USA</a></h4>
+                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                            <div class="btn-wrapper">
+                                <a href="#" class="read-btn">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-classic-item-01 margin-bottom-60">
+                        <div class="thumbnail">
+                            <img src="assets/img/blog-single/03.png" alt="blog">
+                        </div>
+                        <div class="content">
+                            <ul class="post-meta">
+                                <li><a href="#"><i class="fa fa-user"></i> Admin</a></li>
+                                <li><a href="#"><i class="far fa-clock"></i> 11 Dec 2018</a></li>
+                            </ul>
+                            <h4 class="title"><a href="#">Obama  government new policy</a></h4>
+                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                            <div class="btn-wrapper">
+                                <a href="#" class="read-btn">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-classic-item-01 margin-bottom-60">
+                        <div class="thumbnail">
+                            <img src="assets/img/blog-single/02.png" alt="blog">
+                        </div>
+                        <div class="content">
+                            <ul class="post-meta">
+                                <li><a href="#"><i class="fa fa-user"></i> Admin</a></li>
+                                <li><a href="#"><i class="far fa-clock"></i> 11 Dec 2018</a></li>
+                            </ul>
+                            <h4 class="title"><a href="#">Protest for human rights</a></h4>
+                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                            <div class="btn-wrapper">
+                                <a href="#" class="read-btn">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-pagination">
+                        <ul>
+                            <li><a class="next page-numbers" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                            <li><span class="page-numbers current">1</span></li>
+                            <li><a class="page-numbers" href="#">2</a>
+                            </li>
+                            <li><a class="next page-numbers" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="widget-area">
+                        <div class="widget widget_search">
+                            <form action="blog.html" class="search-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="widget widget_recent_posts">
+                            <h4 class="widget-title style-01">Recent Post</h4>
+                            <ul class="recent_post_item">
+                                <li class="single-recent-post-item">
+                                    <div class="thumb">
+                                        <img src="assets/img/popular-post/01.png" alt="recent post">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">Inspiration comes in many ways and you like to save everything</a></h4>
+                                        <span class="time"><i class="far fa-clock"></i> 11 Dec 2018</span>
+                                    </div>
+                                </li>
+                                <li class="single-recent-post-item">
+                                    <div class="thumb">
+                                        <img src="assets/img/popular-post/02.png" alt="recent post">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">Helps you keep your inspiration in the same place from pictures</a></h4>
+                                        <span class="time"><i class="far fa-clock"></i> 11 Dec 2018</span>
+                                    </div>
+                                </li>
+                                <li class="single-recent-post-item">
+                                    <div class="thumb">
+                                        <img src="assets/img/popular-post/03.png" alt="recent post">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">Always find what you are looking for. </a></h4>
+                                        <span class="time"><i class="far fa-clock"></i> 11 Dec 2018</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tag_cloud-2" class="widget widget_tag_cloud">
+                            <h2 class="widget-title style-01">Tags</h2>
+                            <div class="tagcloud">
+                                <a href="#">App</a>
+                                <a href="#">Articles</a>
+                                <a href="#">Business</a>
+                                <a href="#">Technology</a>
+                                <a href="#">Marketing</a>
+                                <a href="#">Social</a>
+                                <a href="#">Politics</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+{% endblock content %}

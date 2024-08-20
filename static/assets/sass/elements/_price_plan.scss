@@ -1,0 +1,116 @@
+/*---------------------------------
+    Price Plan Item
+---------------------------------*/
+
+.single-price-plan-01 {
+    text-align: center;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+    transition: .3s ease-in;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(48, 55, 63, 0.35);
+    box-shadow: 0px 0px 7px 0px rgba(48, 55, 63, 0.35);
+    .price-header {
+        position: relative;
+        .popular {
+            position: absolute;
+            top: 15px;
+            right: -55px;
+            display: inline-block;
+            background-color: var(--main-color-one);
+            padding: 10px 30px;
+            width: 180px;
+            -webkit-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            transform: rotate(40deg);
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .title {
+            color: #fff;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 600;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            background-color: var(--secondary-color);
+            font-family: var(--heading-font);
+        }
+        .price {
+            font-size: 48px;
+            font-family: var(--heading-font);
+            line-height: 60px;
+            color: var(--main-color-one);
+            font-weight: 700;
+            -webkit-transition: .3s ease-in;
+            -o-transition: .3s ease-in;
+            transition: .3s ease-in;
+            text-align: center;
+            position: relative;
+            z-index: 0;
+            border-bottom: 2px solid #c5d4db;
+            padding-bottom: 25px;
+            margin: 0 20px;
+            .dollar {
+                font-size: 33px;
+                line-height: 33px;
+                position: relative;
+                top: -12px;
+            }
+            .month {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    .price-body ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        li {
+            list-style: none;
+            display: block;
+            margin: 27px 0;
+            -webkit-transition: .3s ease-in;
+            -o-transition: .3s ease-in;
+            transition: .3s ease-in;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .price-footer {
+        margin-top: 40px;
+        .order-btn:hover {
+            -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.35);
+            background-color:  var(--main-color-one);
+            color: #fff;
+        }
+        .order-btn {
+            display: inline-block;
+            width: 165px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 25px;
+            color: #fff;
+            -webkit-transition: .5s ease-in;
+            -o-transition: .5s ease-in;
+            transition: .5s ease-in;
+            font-weight: 600;
+            background-color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+    }
+}

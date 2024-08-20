@@ -1,0 +1,21 @@
+/*-------------------------
+    Footer Area
+-------------------------*/
+
+.footer-top {
+    background-color: #000018;
+    border-bottom: 1px solid rgba(114, 108, 148, .2);
+    &.style-01 {
+        border-bottom: 1px solid rgba(114, 108, 148, .2);
+        background-color: #eaeaef;
+        .widget {
+            .widget-title {
+                color: var(--main-color-one);
+            }
+        }
+    }
+}
+
+.copyright-area {
+    background-color: #010114;
+}

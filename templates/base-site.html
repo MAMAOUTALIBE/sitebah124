@@ -1,0 +1,222 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RTK Agency</title> 
+    {% load static %} 
+    <link rel="icon" href="{% static 'favicon.ico' %}" sizes="20x20" type="image/png">
+    <!-- animate -->
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- magnific popup -->  
+    <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <!-- owl carousel -->
+    <link href="{% static 'assets/css/owl.carousel.min.css' %}" rel="stylesheet" >
+    <!-- fontawesome -->
+    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- flaticon -->
+    <link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <!-- responsive Stylesheet -->
+    <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <!-- //. search Popup -->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button class="close-btn border-none"><i class="fas fa-times"></i></button>
+        </form>
+    </div>
+    <div class="header-style-01">
+        <!-- support bar area end -->
+        <nav class="navbar navbar-area navbar-expand-lg nav-style-02">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <div class="logo-wrapper">
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'assets/img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
+                    <ul class="navbar-nav">
+                        <!--<li class="menu-item-has-children current-menu-item">
+                            <a href="#">Home</a>
+                        </li> -->
+                        <li><a href="{% url 'index' %}">Accueil</a></li>
+                        <li><a href="{% url 'about' %}">A propos</a></li>
+                        <li><a href="{% url 'events' %}">Evenements</a></li>
+                        <!--- <li class="menu-item-has-children">
+                            <a href="#">Contiributions</a>
+                            <ul class="sub-menu">
+                                <li><a href="contribute.html">Contribute</a></li>
+                                <li><a href="contribute-details.html">Contribute Details</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="{% url 'news' %}">Actualités</a></li>
+                        <!--<li class="menu-item-has-children">
+                            <a href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="news-details.html">News Details</a></li>
+                            </ul>
+                        </li>-->
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right-content">
+                    <div class="btn-wrapper">
+                        <a href="#" class="boxed-btn">Contributer</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar area end -->
+    </div>
+    
+    {% block content %}
+
+
+    {% endblock content %}
+
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="footer-top padding-top-85 padding-bottom-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget">
+                            <div class="about_us_widget">
+                                <a href="index.html" class="footer-logo"> <img src="{% static "assets/img/logo.png" %}" alt="footer logo"></a>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget ">
+                            <h4 class="widget-title">About Me</h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt </p>
+                            <ul class="contact_info_list">
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="flaticon-phone"></i>
+                                    </div>
+                                    <div class="details">
+                                        +3 123 456 789
+                                    </div>
+                                </li>
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="flaticon-mail"></i>
+                                    </div>
+                                    <div class="details">
+                                        info@yourmail.com
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-title">Useful Links</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">the issues</a></li>
+                                <li><a href="#">our Campaign</a></li>
+                                <li><a href="#">our volunteer</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-title">support</h4>
+                            <ul>
+                                <li><a href="#">Support Center</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-area-inner">
+                            &copy; Copyright 2020 Harnold All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="center">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- jquery -->
+    <script src="{% static 'assets/js/jquery-2.2.4.min.js' %}"></script>
+    <!-- bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- magnific popup -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+    <!-- wow -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!-- owl carousel -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- waypoint -->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <!-- counterup -->
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <!-- imageloaded -->
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- isotope -->
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <!-- main js -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

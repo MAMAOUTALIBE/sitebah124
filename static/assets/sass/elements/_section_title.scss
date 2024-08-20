@@ -1,0 +1,111 @@
+/*-------------------------
+    Section Title
+-------------------------*/
+
+.section-title-inner {
+    &.white {
+        .subtitle {
+            color: rgba($white, .7);
+        }
+        .title {
+            color: $white;
+        }
+        p {
+            color: rgba($white, .7);
+        }
+    }
+    .title {
+        font-size: 40px;
+        line-height: 42px;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-family: var(--heading-font);
+        margin-bottom: 18px;
+        span {
+            color: var(--main-color-one);
+        }
+    }
+    .subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+        padding-left: 80px;
+        margin-bottom: 8px;
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            height: 2px;
+            width: 60px;
+            background-color: var(--main-color-one);
+            content: '';
+        }
+    }
+    p {}
+}
+
+.section-title {
+    &.white {
+        .title {
+            color: $white;
+        }
+        p {
+            color: rgba($white, .7);
+        }
+        .section-para {
+            color: rgba($white, .7);
+        }
+    }
+    .title {
+        font-size: 48px;
+        line-height: 58px;
+        font-weight: 700;
+        font-family: var(--heading-font);
+        margin-bottom: 14px;
+        span {
+            color: var(--main-color-one);
+        }
+    }
+    .subtitle {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+        margin-bottom: 8px;
+        color: var(--main-color-one);
+    }
+    span {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: var(--body-font);
+        color: var(--main-color-one);
+    }
+    p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .section-para {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+}
+
+.bg-litered {
+    background-color: var(--main-color-one);
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-blue {
+    background-color: var(--main-color-two);
+}

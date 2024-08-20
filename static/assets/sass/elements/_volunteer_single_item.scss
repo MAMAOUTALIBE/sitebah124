@@ -1,0 +1,58 @@
+// Volunteer Area
+.volunteer-area {
+    &.m-top {
+        margin-top: -340px;
+    }
+    &.m-top-02 {
+        margin-top: -185px;
+    }
+}
+
+.volunteer-single-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    background-color: var(--main-color-one);
+    &.style-01 {
+        background-color: var(--main-color-two);
+    }
+    &.style-02 {
+        background-color: #14b3e4;
+    }
+    .thumb {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content {
+        padding: 90px 45px;
+        margin: auto;
+        &.style-01 {
+            padding: 90px 45px;
+        }
+        .icon {
+            color: $white;
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: $white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        p {
+            color: $white;
+            margin-bottom: 15px;
+            max-width: 285px;
+            margin: auto;
+        }
+    }
+}

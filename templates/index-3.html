@@ -1,0 +1,685 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RTK Agency</title> 
+    {% load static %} 
+    <link rel="icon" href="{% static 'favicon.ico' %}" sizes="20x20" type="image/png">
+    <!-- animate -->
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- magnific popup -->  
+    <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <!-- owl carousel -->
+    <link href="{% static 'assets/css/owl.carousel.min.css' %}" rel="stylesheet" >
+    <!-- fontawesome -->
+    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- flaticon -->
+    <link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <!-- responsive Stylesheet -->
+    <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <!-- //. search Popup -->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button class="close-btn border-none"><i class="fas fa-times"></i></button>
+        </form>
+    </div>
+    <div class="header-style-01">
+        <!-- support bar area end -->
+        <nav class="navbar navbar-area navbar-expand-lg nav-style-02">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <div class="logo-wrapper">
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'assets/img/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
+                    <ul class="navbar-nav">
+                        <!--<li class="menu-item-has-children current-menu-item">
+                            <a href="#">Home</a>
+                        </li> -->
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="event.html">Evenements</a></li>
+                        <!--- <li class="menu-item-has-children">
+                            <a href="#">Contiributions</a>
+                            <ul class="sub-menu">
+                                <li><a href="contribute.html">Contribute</a></li>
+                                <li><a href="contribute-details.html">Contribute Details</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="news.html">Actualités</a></li>
+                        <!--<li class="menu-item-has-children">
+                            <a href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="news-details.html">News Details</a></li>
+                            </ul>
+                        </li>-->
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right-content">
+                    <div class="btn-wrapper">
+                        <a href="#" class="boxed-btn">Contributer</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar area end -->
+    </div>
+    <div class="header-slider-one">
+        <div class="header-area style-02 header-bg-03" style="background-image:url({% static "assets/img/header-slider/bg-02.png" %});">
+            <div class="bg-img" style="background-image:url({% static "assets/img/header-slider/03.png" %} );"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="header-inner-03">
+                            <!-- header inner -->
+                            <h1 class="title">Together we can make better country</h1>
+                            <div class="header-bottom">
+                                <div class="author-mate">
+                                    <div class="author-sign">
+                                        <img src="{% static 'assets/img/header-slider/sign.png' %}" alt="">
+                                    </div>
+                                    <div class="author-designation">
+                                        <p>Candidate, Democrate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //.header inner -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-area style-02 header-bg-03" style="background-image:url({% static "assets/img/header-slider/bg-02.png" %});">
+            <div class="bg-img" style="background-image:url({% static "assets/img/header-slider/01.png" %});"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="header-inner-03">
+                            <!-- header inner -->
+                            <h1 class="title">Together we can make better country</h1>
+                            <div class="header-bottom">
+                                <div class="author-mate">
+                                    <div class="author-sign">
+                                        <img src="{% static "assets/img/header-slider/sign.png"%}" alt="">
+                                    </div>
+                                    <div class="author-designation">
+                                        <p>Candidate, Democrate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //.header inner -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom-area m-top">
+        <div class="container">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-lg-4">
+                    <div class="header-bottom-top bg-blue">
+                        <div class="section-title white">
+                            <h2 class="title">Join Our Movement
+                            </h2>
+                            <p>Help fulfill our promise to Make America Great Again!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="contact-info header-bottom-contact bg-litered">
+                        <form action="contact.html" class="contact-page-form">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control brrtb" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group contact-info-btn">
+                                        <input type="text" class="form-control brltb" placeholder="Your Phone">
+                                        <button type="submit" class="subscribe-btn"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- idology area start  -->
+    <section class="idology-area padding-bottom-140 padding-top-115">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-sm-12 col-12">
+                    <div class="section-title desktop-center margin-bottom-70">
+                        <span>Policy positions</span>
+                        <h2 class="title">Ideological Leader For Youth Generation
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-6">
+                    <div class="idology-single-item-03">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/idology/04.png" %}" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="content-wrapper">
+                                <h3 class="title">Growing our economy</h3>
+                                <p>Phasellus finibus ut felis sed suscipit. Donec gravida vel libero ac eleifend. Nullam i</p>
+                                <div class="btn-wrapper">
+                                    <a href="#" class="read-btn">Read More<i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="idology-single-item-03 active">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/idology/02.png"%}" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="content-wrapper">
+                                <h3 class="title">Growing our economy</h3>
+                                <p>Phasellus finibus ut felis sed suscipit. Donec gravida vel libero ac eleifend. Nullam i</p>
+                                <div class="btn-wrapper">
+                                    <a href="#" class="read-btn">Read More<i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="idology-single-item-03">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/idology/03.png"%}" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="content-wrapper">
+                                <h3 class="title">Growing our economy</h3>
+                                <p>Phasellus finibus ut felis sed suscipit. Donec gravida vel libero ac eleifend. Nullam i</p>
+                                <div class="btn-wrapper">
+                                    <a href="#" class="read-btn">Read More<i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- idology area end -->
+    <!-- Support Our Area -->
+    <div class="support-our-activities">
+        <div class="continer">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="support-content padding-top-110 padding-bottom-460 bg-image-02" style="background-image: url({% static "assets/img/bg/09.png" %});">
+                        <div class="content">
+                            <h4 class="title">
+                                Support Our Activities By a Raise Voice
+                            </h4>
+                            <div class="vdo-btn">
+                                <a class="video-play-btn style-01 mfp-iframe" href="https://www.youtube.com/watch?v=-ZwQtICNbRc"><i class="fas fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Volunteer Area -->
+    <div class="volunteer-area m-top">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-6">
+                    <div class="volunteer-single-item style-01">
+                        <div class="content">
+                            <h3 class="title">
+                                Be a volunteer
+                            </h3>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="volunteer-single-item">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/volunteer/01.png" %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="volunteer-single-item  style-02">
+                        <div class="content">
+                            <h3 class="title">
+                                Get Campaign Gear
+                            </h3>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="volunteer-single-item">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/volunteer/02.png" %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="volunteer-single-item">
+                        <div class="content">
+                            <h3 class="title">
+                                Contribute Now
+                            </h3>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="volunteer-single-item">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/volunteer/03.png" %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Visson and misson  -->
+    <div class="misson-vision-area padding-top-120 padding-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="misson-vision-content-02">
+                        <div class="content margin-bottom-30">
+                            <div class="section-title">
+                                <span>Vision & Mission </span>
+                                <h2 class="title">Walk on idology with hope </h2>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="section-para"> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Globally eenable</p>
+                            </div>
+                            <div class="btn-wrapper margin-top-30">
+                                <a href="#" class="boxed-btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="vision-single-item-02 margin-bottom-30">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/we-provide/02.png" %}" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="">
+                                <h4 class="title">Growing Economy</h4>
+                            </a>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim Nullam in justo mattis libero </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="vision-single-item-02 margin-bottom-30">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/we-provide/03.png" %}" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="">
+                                <h4 class="title">Creating Jobs</h4>
+                            </a>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim Nullam in justo mattis libero </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Counter Area -->
+    <div class="counterup-area bg-blue bg-image-02 padding-bottom-105 padding-top-100" style="background-image: url(assets/img/bg/02.png)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-counterup-01">
+                        <div class="content">
+                            <div class="count-wrap"><span class="count-num">25,007</span>+</div>
+                            <h4 class="title">Successfully Delivered</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-counterup-01">
+                        <div class="content">
+                            <div class="count-wrap"><span class="count-num">344,771</span>+</div>
+                            <h4 class="title">Worldwide Clients</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-counterup-01">
+                        <div class="content">
+                            <div class="count-wrap"><span class="count-num">7,079</span>+</div>
+                            <h4 class="title">Store Clients Products</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-counterup-01">
+                        <div class="content">
+                            <div class="count-wrap"><span class="count-num">1043</span>+</div>
+                            <h4 class="title">Total Km Reach So Far</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial area start  -->
+    <section class="testimonial-area bg-blue bg-image" style="background-image: url({% static "assets/img/bg/08.png" %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-carousel-area">
+                        <div class="testimonial-carousel">
+                            <div class="single-testimonial-item">
+                                <div class="thumb bg-image-02 style-01" style="background-image: url({% static "assets/img/testimonial/02.png" %});"></div>
+                                <div class="content style-01">
+                                    <div class="icon">
+                                        <i class="flaticon-right-quote-1"></i>
+                                    </div>
+                                    <h2 class="title">What they say</h2>
+                                    <p class="description">I found myself working in a true partnership that results in an incredible experience, and an end product that is the best. </p>
+                                    <div class="author-details">
+                                        <div class="author-meta">
+                                            <h4 class="title">Andre Robin
+                                            </h4>
+                                            <span class="designation">CTO, art media</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-testimonial-item">
+                                <div class="thumb bg-image-02 style-01" style="background-image: url({% static "assets/img/testimonial/02.png" %});"></div>
+                                <div class="content style-01">
+                                    <div class="icon">
+                                        <i class="flaticon-right-quote-1"></i>
+                                    </div>
+                                    <h2 class="title">What they say</h2>
+                                    <p class="description">I found myself working in a true partnership that results in an incredible experience, and an end product that is the best. </p>
+                                    <div class="author-details">
+                                        <div class="author-meta">
+                                            <h4 class="title">Andre Robin
+                                            </h4>
+                                            <span class="designation">CTO, art media</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial area end -->
+    <!-- blog area start  -->
+    <section class="blog-area padding-top-115 padding-bottom-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title desktop-center margin-bottom-60">
+                        <span>Latest News</span>
+                        <h3 class="title">Have a look whats going on</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--<div class="col-lg-4">
+                    <div class="single-blog-grid-01 style-01">
+                        <div class="thumb">
+                            <img src="{% static "assets/img/blog/01.png" %}" alt="blog image">
+                        </div>
+                        <div class="content">
+                            <ul class="post-meta">
+                                <li><a href="#"><span><em>By</em></span> Admin</a></li>
+                                <li class="date"><a href="#"><i class="flaticon-booking"></i>20 Dec 2019</a></li>
+                            </ul>
+                            <h4 class="title"><a href="#">Presidnetal Electon 2020</a></h4>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="single-blog-grid-01">
+                                <div class="thumb">
+                                    <img src="{% static "assets/img/blog/03.png" %}" alt="blog image">
+                                </div>
+                                <div class="content">
+                                    <ul class="post-meta">
+                                        <li><a href="#"><span><em>By</em></span> Admin</a></li>
+                                        <li class="date"><a href="#"><i class="flaticon-booking"></i>20 Dec 2019</a></li>
+                                    </ul>
+                                    <h4 class="title"><a href="#">Better rules for selecting</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="single-blog-grid-01">
+                                <div class="thumb">
+                                    <img src="{% static "assets/img/blog/03.png" %}" alt="blog image">
+                                </div>
+                                <div class="content">
+                                    <ul class="post-meta">
+                                        <li><a href="#"><span><em>By</em></span> Admin</a></li>
+                                        <li class="date"><a href="#"><i class="flaticon-booking"></i>20 Dec 2019</a></li>
+                                    </ul>
+                                    <h4 class="title"><a href="#">Reduce budget of USA</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-blog-grid-01">
+                                <div class="thumb">
+                                    <img src="{% static "assets/img/blog/04.png" %}" alt="blog image">
+                                </div>
+                                <div class="content">
+                                    <ul class="post-meta">
+                                        <li><a href="#"><span><em>By</em></span> Admin</a></li>
+                                        <li class="date"><a href="#"><i class="flaticon-booking"></i>20 Dec 2019</a></li>
+                                    </ul>
+                                    <h4 class="title"><a href="#">Democrate election idea</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-blog-grid-01">
+                                <div class="thumb">
+                                    <img src="{% static "assets/img/blog/05.png" %}" alt="blog image">
+                                </div>
+                                <div class="content">
+                                    <ul class="post-meta">
+                                        <li><a href="#"><span><em>By</em></span> Admin</a></li>
+                                        <li class="date"><a href="#"><i class="flaticon-booking"></i>20 Dec 2019</a></li>
+                                    </ul>
+                                    <h4 class="title"><a href="#">Vote countdown start jun</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog area end -->
+    <!-- Dolar Area -->
+    <div class="dolar-area bg-image padding-bottom-120 padding-top-100" style="background-image: url({% static "assets/img/testimonial/bg.png" %});">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="dolar-campaign">
+                    <div class="dolar-content">
+                        <h2 class="title"><span class="count-num">2,053,828</span></h2>
+                        <p>Dolars in Campaign Contiributions So Far</p>
+                        <div class="btn-wrapper">
+                            <a href="#" class="boxed-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="footer-top padding-top-85 padding-bottom-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget">
+                            <div class="about_us_widget">
+                                <a href="index.html" class="footer-logo"> <img src="{% static "assets/img/logo.png" %}" alt="footer logo"></a>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget ">
+                            <h4 class="widget-title">About Me</h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt </p>
+                            <ul class="contact_info_list">
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="flaticon-phone"></i>
+                                    </div>
+                                    <div class="details">
+                                        +3 123 456 789
+                                    </div>
+                                </li>
+                                <li class="single-info-item">
+                                    <div class="icon">
+                                        <i class="flaticon-mail"></i>
+                                    </div>
+                                    <div class="details">
+                                        info@yourmail.com
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-title">Useful Links</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">the issues</a></li>
+                                <li><a href="#">our Campaign</a></li>
+                                <li><a href="#">our volunteer</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-title">support</h4>
+                            <ul>
+                                <li><a href="#">Support Center</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-area-inner">
+                            &copy; Copyright 2020 Harnold All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="center">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- jquery -->
+    <script src="{% static 'assets/js/jquery-2.2.4.min.js' %}"></script>
+    <!-- bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- magnific popup -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+    <!-- wow -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!-- owl carousel -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- waypoint -->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <!-- counterup -->
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <!-- imageloaded -->
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- isotope -->
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <!-- main js -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

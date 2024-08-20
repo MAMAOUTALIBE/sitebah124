@@ -1,0 +1,46 @@
+// Single Event Item
+.single-event-item {
+    display: flex;
+    .thumb {
+        margin-right: 30px;
+        max-width: 260px;
+    }
+    p {
+        max-width: 435px;
+    }
+    .content {
+        display: flex;
+        .post-mate {
+            margin-bottom: 24px;
+            margin-right: 17px;
+            padding: 15px 18px;
+            background-color: var(--main-color-one);
+            .post-date {
+                font-family: var(--body-font);
+                color: $white;
+                font-size: 24px;
+                line-height: 18px;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+            .post-month {
+                color: $white;
+                text-align: center;
+                line-height: 18px;
+            }
+        }
+        .author-mate {
+            .title {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 30px;
+            }
+            p {
+                i {
+                    color: var(--main-color-one);
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

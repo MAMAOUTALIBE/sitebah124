@@ -1,0 +1,209 @@
+{% extends "base-site.html" %}
+    
+{% load static %}
+
+{% block content %}
+
+
+    <!-- Breadcrumb Area -->
+    <div class="breadcrumb-area  margin-bottom-120" style="background-image:url(assets/img/breadcrumb/01.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h2 class="page-title">News Details</h2>
+                        <ul class="page-list">
+                            <li><a href="{% url "index" %}">Accueil</a></li>
+                            <li><a href="#">News Details</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content our-attoryney padding-bottom-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-details-item">
+                        <div class="thumb margin-bottom-20">
+                            <img src="{{new.image.url}}" alt="blog">
+                        </div>
+                        <div class="blog-details-item-header">
+                            <ul class="post-meta">
+                                <li><a href="#"><i class="fa fa-user"></i> {{new.author}}</a></li>
+                                <li><a href="#"><i class="far fa-clock"></i>{{new.created_at}}</a></li>
+                            </ul>
+                        </div>
+                        <h2 class="title">{{new.title}}</h2>
+                        <p>{{new.summary}}</p>
+                        <!--<blockquote>
+                            <div class="icon"><i class="flaticon-quote"></i></div>
+                            <p>Pellentesque ante arcu, luctus eu tortor ac, accu msan ultrices tellus. Vivamus finibus, augue id feugiat tincidunt, velit lacus tristique risus, nec cursus odio enim vitae ex.</p>
+                        </blockquote>-->
+                        <p>{{new.description}} </p>
+                        <!--<div class="blog-img-thumb padding-top-30">
+                            <div class="thumb">
+                                <img src="assets/img/service/01.png" alt="">
+                            </div>
+                            <div class="thumb-02">
+                                <img src="assets/img/service/05.png" alt="">
+                            </div>
+                        </div>-->
+                    </div>
+                    <!--<div class="blog-details-footer">
+                        <div class="left">
+                            <ul class="tags">
+                                <li class="title">Tags: </li>
+                                <li> <a href="#" rel="tag">Apps</a> <a href="E" rel="tag">Business</a> <a href="E" rel="tag">Marketing</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <div class="social-link style-02">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-square facebook"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter-square twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-square g-plus"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--<div class="comments-area">
+                      
+                        <h3 class="comments-title">03 Comments</h3>
+                        <ul class="comment-list">
+                            <li>
+                                <div class="single-comment-wrap">
+                                     
+                                    <div class="thumb">
+                                        <img src="assets/img/comments/02.png" alt="comment images">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Steve Smith</h4>
+                                        <span class="date">12 Sep,18</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.</p>
+                                        <a href="#" class="reply">Reply</a>
+                                    </div>
+                                </div>
+                                
+                            </li>
+                            <li class="has-children">
+                                <ul>
+                                    <li>
+                                        <div class="single-comment-wrap">
+                                           
+                                            <div class="thumb">
+                                                <img src="assets/img/comments/01.png" alt="comment images">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">Jhon Martin</h4>
+                                                <span class="date">12 Sep,18</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.</p>
+                                                <a href="#" class="reply">Reply</a>
+                                            </div>
+                                        </div>
+                                        
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="single-comment-wrap">
+                                   
+                                    <div class="thumb">
+                                        <img src="assets/img/comments/03.png" alt="comment images">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">Warner Martin</h4>
+                                        <span class="date">12 Sep,18</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.</p>
+                                        <a href="#" class="reply">Reply</a>
+                                    </div>
+                                </div>
+                               
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="comment-form-wrap padding-top-40">
+                            
+                            <h3 class="reply-title">Post Comment</h3>
+                            <p>Your email address will not be published. Required fields are marked *</p>
+                            <form action="blog-details.html" class="comment-form padding-top-25">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group textarea">
+                                    <textarea name="message" id="message" class="form-control" placeholder="Comments" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="btn-wrapper">
+                                    <a href="" class="boxed-btn reverse-color">Post Comment</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>-->
+                </div>
+                <!--<div class="col-lg-4">
+                    <div class="widget-area">
+                        <div class="widget widget_search">
+                            <form action="blog.html" class="search-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="widget widget_recent_posts">
+                            <h4 class="widget-title style-01">Recent Post</h4>
+                            <ul class="recent_post_item">
+                                <li class="single-recent-post-item">
+                                    <div class="thumb">
+                                        <img src="assets/img/popular-post/01.png" alt="recent post">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">Inspiration comes in many ways and you like to save everything</a></h4>
+                                        <span class="time"> 2 days ago</span>
+                                    </div>
+                                </li>
+                                <li class="single-recent-post-item">
+                                    <div class="thumb">
+                                        <img src="assets/img/popular-post/02.png" alt="recent post">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">Helps you keep your inspiration in the same place from pictures</a></h4>
+                                        <span class="time"> 2 days ago</span>
+                                    </div>
+                                </li>
+                                <li class="single-recent-post-item">
+                                    <div class="thumb">
+                                        <img src="assets/img/popular-post/03.png" alt="recent post">
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">Always find what you are looking for. </a></h4>
+                                        <span class="time">2 days ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tag_cloud-2" class="widget widget_tag_cloud">
+                            <h2 class="widget-title style-01">Tags</h2>
+                            <div class="tagcloud">
+                                <a href="#">App</a>
+                                <a href="#">Articles</a>
+                                <a href="#">Business</a>
+                                <a href="#">Technology</a>
+                                <a href="#">Marketing</a>
+                                <a href="#">Social</a>
+                                <a href="#">Politics</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

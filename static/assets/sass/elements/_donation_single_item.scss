@@ -1,0 +1,73 @@
+// Donation Single Item
+.donation_wrapper {
+    padding: 40px 45px 45px;
+    background: #ebebeb;
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .single_amount_wrapper {
+        display: flex;
+        align-items: center;
+        .single_amount {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            color: $white;
+            background: var(--main-color-one);
+            margin-bottom: 20px;
+            cursor: pointer;
+            &:hover {
+                background: var(--main-color-two);
+            }
+        }
+    }
+    .amount_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        input,
+        .suffix {
+            padding: 8px;
+            border: 0;
+            font-weight: bold;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+            background: transparent;
+            width: 100%;
+        }
+        input {
+            border-radius: 0 8px 8px 0;
+            border-right: 0;
+            outline: none;
+        }
+        .suffix {
+            border-radius: 5px 0 0 5px;
+            width: 10%;
+        }
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        padding: 15px 25px;
+        border: 0;
+        color: $white;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset;
+        background: var(--main-color-one);
+        transition: (all 0.3s);
+        &:hover {
+            background: var(--main-color-two);
+        }
+        &:active {
+            box-shadow: 0 -2px 2px 0 rgba(255, 255, 255, 0.2) inset, 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset;
+        }
+    }
+}
