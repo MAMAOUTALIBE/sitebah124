@@ -4,9 +4,9 @@ from django.urls import path, include
 from django.conf.urls.static import static 
 from django.conf import settings 
 
-admin.site.site_header = 'Blog Dasboard'
-admin.site.site_title = 'Blog Admin'
-admin.site.index_title= 'Blog Dashboard Administration'
+admin.site.site_header = 'RTK Agency Blog Dashboard'
+admin.site.site_title = 'RTK Agency Blog Admin'
+admin.site.index_title= 'RTK Agency Blog Dashboard Administration'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

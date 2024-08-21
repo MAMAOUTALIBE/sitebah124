@@ -11,10 +11,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-inner">
-                        <h2 class="page-title">News Details</h2>
+                        <h2 class="page-title">Event Details</h2>
                         <ul class="page-list">
                             <li><a href="{% url "index" %}">Accueil</a></li>
-                            <li><a href="{% url 'news' %}">Retourer aux actualités</a></li>
+                            <li><a href="{% url 'events' %}">Retourer à nos évenements</a></li>
                         </ul>
                     </div>
                 </div>
@@ -28,21 +28,21 @@
                 <div class="col-lg-12">
                     <div class="blog-details-item">
                         <div class="thumb margin-bottom-20">
-                            <img src="{{new.image.url}}" alt="blog">
+                            <img src="{{event.image.url}}" alt="blog">
                         </div>
                         <div class="blog-details-item-header">
                             <ul class="post-meta">
-                                <li><a href="#"><i class="fa fa-user"></i> {{new.author}}</a></li>
-                                <li><a href="#"><i class="far fa-clock"></i>{{new.created_at}}</a></li>
+                                <!--<li><a href="#"><i class="fa fa-user"></i> {{new.author}}</a></li>-->
+                                <li><a href="#"><i class="far fa-clock"></i>Publié le {{event.created_at}}</a></li>
                             </ul>
                         </div>
-                        <h2 class="title">{{new.title}}</h2>
-                        <p>{{new.summary}}</p>
+                        <h2 class="title">{{event.title}}</h2>
+                        <p>{{event.summary}}</p>
                         <!--<blockquote>
                             <div class="icon"><i class="flaticon-quote"></i></div>
                             <p>Pellentesque ante arcu, luctus eu tortor ac, accu msan ultrices tellus. Vivamus finibus, augue id feugiat tincidunt, velit lacus tristique risus, nec cursus odio enim vitae ex.</p>
                         </blockquote>-->
-                        <p>{{new.description}} </p>
+                        <p>{{event.description}} </p>
                         <!--<div class="blog-img-thumb padding-top-30">
                             <div class="thumb">
                                 <img src="assets/img/service/01.png" alt="">

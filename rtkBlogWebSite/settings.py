@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-cqw@-x@5ga&!gnw2dn@3@fla4^+vft=+yd968@38pm0e=2l5nd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'rtk-agency-v1-0.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'rtk-agency-v1-0.onrender.com']
 
 
 # Application definition
@@ -131,6 +131,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "https://rtk-agency-v1-0.onrender.com",
-    "http://localhost:8080",
-    "http://127.0.0.1:9000",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "https://rtk-agency-v1-0.onrender.com",
+]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'orthochallengeteam@gmail.com'
+EMAIL_HOST_PASSWORD = 'uxwjftfshtpntuyg'

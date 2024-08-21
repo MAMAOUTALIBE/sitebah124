@@ -244,7 +244,7 @@
     </section>
     <!-- testimonial area end -->
     <!-- Our Event -->
-    <div class="our-event-area padding-top-120 padding-bottom-95">
+    <div class="our-event-area padding-top-20 padding-bottom-95">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -256,82 +256,37 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col-lg-6 single-event-item margin-bottom-30">
-                            <div class="thumb">
-                                <img src="{% static "assets/img/event/01.png" %}" alt="blog image">
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="content">
-                                    <div class="post-mate">
-                                        <h2 class="post-date">23</h2>
-                                        <div class="post-month">Sep</div>
-                                    </div>
-                                    <div class="author-mate">
-                                        <h4 class="title"><a href="#">Environment Summit for city</a></h4>
-                                        <p><i class="flaticon-global"></i> Benefit Teragram Hall 395 Nostrand Ave, Brooklyn.</p>
-                                    </div>
-                                </div>
-                                <p>Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt non efficitur ex fringilla id. Donec porttitor molestie dolor a pellentesque.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 single-event-item margin-bottom-30">
-                            <div class="thumb">
-                                <img src="{% static "assets/img/event/02.png" %}" alt="blog image">
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="content">
-                                    <div class="post-mate">
-                                        <h2 class="post-date">23</h2>
-                                        <div class="post-month">Sep</div>
-                                    </div>
-                                    <div class="author-mate">
-                                        <h4 class="title"><a href="#">Environment Summit for city</a></h4>
-                                        <p><i class="flaticon-global"></i>Benefit Teragram Hall 395 Nostrand Ave, Brooklyn.</p>
-                                    </div>
-                                </div>
-                                <p> Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt non efficitur ex fringilla id. Donec porttitor molestie dolor a pellentesque.</p>
-                            </div>
-                        </div>
 
+                        {% for event in events %}
+        
                         <div class="col-lg-6 single-event-item margin-bottom-30">
                             <div class="thumb">
-                                <img src="{% static "assets/img/event/01.png" %}" alt="blog image">
+                                <img src="{{event.image.url}}" style="width: 270px; height: 180px; object-fit: cover;" class="img-fluid" alt="blog image">
                             </div>
                             <div class="content-wrapper">
                                 <div class="content">
                                     <div class="post-mate">
-                                        <h2 class="post-date">23</h2>
-                                        <div class="post-month">Sep</div>
+                                        <h2 class="post-date">{{event.created_at|date:"d"}}</h2>
+                                        <div class="post-month">{{event.created_at|date:"F"}}</div>
+                                        <div class="post-month">{{event.created_at|date:"Y"}}</div>
                                     </div>
                                     <div class="author-mate">
-                                        <h4 class="title"><a href="#">Environment Summit for city</a></h4>
-                                        <p><i class="flaticon-global"></i> Benefit Teragram Hall 395 Nostrand Ave, Brooklyn.</p>
+                                        <h4 class="title"><a href="{% url 'event_details' event.id %}">{{event.title}}</a></h4>
+                                        <p><i class="flaticon-global"></i>{{event.summary}}</p>
+                                        <button class="btn btn-info"><a href="{% url 'event_details' event.id %}">Voir plus</a></button>
                                     </div>
                                 </div>
-                                <p>Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt non efficitur ex fringilla id. Donec porttitor molestie dolor a pellentesque.</p>
+                               
                             </div>
                         </div>
-                        <div class="col-lg-6 single-event-item margin-bottom-30">
-                            <div class="thumb">
-                                <img src="{% static "assets/img/event/02.png" %}" alt="blog image">
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="content">
-                                    <div class="post-mate">
-                                        <h2 class="post-date">23</h2>
-                                        <div class="post-month">Sep</div>
-                                    </div>
-                                    <div class="author-mate">
-                                        <h4 class="title"><a href="#">Environment Summit for city</a></h4>
-                                        <p><i class="flaticon-global"></i>Benefit Teragram Hall 395 Nostrand Ave, Brooklyn.</p>
-                                    </div>
-                                </div>
-                                <p> Sed do eiusmod tempor incididunt ut labore et dolore eiusmod tempor incididunt non efficitur ex fringilla id. Donec porttitor molestie dolor a pellentesque.</p>
-                            </div>
-                        </div>
+                        
+                        {% endfor %}
+        
+        
                     </div>
+
+                    <div><button class="btn btn-info"><a href="{% url 'events' %}">Voir plus d'événements</a></button></div>
                 </div>
                 <!--<div class="col-lg-4">
                     <div class="request-page-form-wrap bg-image" style="background-image: url({% static "assets/img/bg/03.png" %});">
@@ -375,7 +330,9 @@
                     </div>
                 </div>-->
             </div>
+            
         </div>
     </div>
+
     
 {% endblock content %}

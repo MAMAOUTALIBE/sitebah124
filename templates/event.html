@@ -21,7 +21,7 @@
     </div>
      <!-- blog area start  -->
     <!-- Our Event -->
-    <div class="our-event-area padding-top-120 padding-bottom-95">
+    <div class="our-event-area padding-top-25 padding-bottom-25">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -40,20 +40,22 @@
 
                         <div class="col-lg-6 single-event-item margin-bottom-30">
                             <div class="thumb">
-                                <img src="{{event.image.url}}" alt="blog image">
+                                <img src="{{event.image.url}}" style="width: 260px; height: 186px; object-fit: cover;" class="img-fluid" alt="blog image">
                             </div>
                             <div class="content-wrapper">
                                 <div class="content">
                                     <div class="post-mate">
                                         <h2 class="post-date">{{event.created_at|date:"d"}}</h2>
                                         <div class="post-month">{{event.created_at|date:"F"}}</div>
+                                        <div class="post-month">{{event.created_at|date:"Y"}}</div>
                                     </div>
                                     <div class="author-mate">
-                                        <h4 class="title"><a href="#">{{event.title}}</a></h4>
+                                        <h4 class="title"><a href="{% url 'event_details' event.id %}">{{event.title}}</a></h4>
                                         <p><i class="flaticon-global"></i>{{event.summary}}</p>
+                                        <button class="btn btn-info"><a href="{% url 'event_details' event.id %}">Voir plus</a></button>
                                     </div>
                                 </div>
-                                <p>{{event.description}}</p>
+                               
                             </div>
                         </div>
                         
@@ -61,6 +63,58 @@
 
 
                     </div>
+
+
+                    <div class="row">
+                        {% if events.has_other_pages %}
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                {% if events.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ events.previous_page_number }}" aria-label="Previous">
+                                        <span aria-hidden="true">Précédent</span>
+                                    </a>
+                                </li>
+                                {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
+                                        <span aria-hidden="true">Précédent</span>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                
+                                {% for i in events.paginator.page_range %}
+                                    {% if events.number == i %}
+                                        <li class="page-item active" aria-current="page">
+                                            <span class="page-link">
+                                                {{ i }} <span class="sr-only">(current)</span>
+                                            </span>
+                                        </li>
+                                    {% else %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                {% if events.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ events.next_page_number }}" aria-label="Next">
+                                        <span aria-hidden="true">Suivant</span>
+                                    </a>
+                                </li>
+                                {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-label="Next">
+                                        <span aria-hidden="true">Suivant</span>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                        {% endif %}
+                    </div>
+
                 </div>
                 <!--<div class="col-lg-4">
                     <div class="request-page-form-wrap bg-image" style="background-image: url({% static "assets/img/bg/03.png" %});">

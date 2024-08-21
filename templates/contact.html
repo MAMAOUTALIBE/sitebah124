@@ -10,10 +10,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-inner">
-                    <h2 class="page-title">Contact Us</h2>
+                    <h2 class="page-title">Saissez nous un message</h2>
                     <ul class="page-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="{% url 'index' %}">Accueil</a></li>
+                        <li><a href="#">Contactez nous</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,31 +71,38 @@
                             {% endif %}
                     </div>
 
-                    <form action="request.html" class="contact-page-form style-01" novalidate="novalidate">
+                    <form class="contact-page-form style-01" action="{% url 'contact' %}" method="post">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="First Name" class="form-control" required="" aria-required="true">
+                                    <input type="text" name="fname" placeholder="Prénom" class="form-control" required="true" aria-required="true">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="lname" placeholder="Last Name" class="form-control" required="" aria-required="true">
+                                    <input type="text" name="lname" placeholder="Nom" class="form-control" required="true" aria-required="true">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="telephone" placeholder="Telephone" class="form-control" required="" aria-required="true">
+                                    <input type="text" name="telephone" placeholder="Telephone" class="form-control" required="true" aria-required="true">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea name="msg" id="msg" cols="1" rows="4" placeholder="Send Message"></textarea>
+                                    <input type="email" name="email" placeholder="Email" class="form-control" required="true" aria-required="true">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="msg" id="msg" cols="1" rows="4" required="true" placeholder="Votre Message"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="btn-wrapper">
-                                    <a href="#" class="boxed-btn"><span>Send Message</span></a>
+                                <button type="submit" class="boxed-btn"><span>Envoyer</span></button>
+                                <!--<a href="#" class="boxed-btn"><span>Send Message</span></a>-->
                                 </div>
                             </div>
                             
