@@ -39,13 +39,13 @@ def contact(request):
         
         message = "Message envoyé avec succèss"
         link = 'Cliquez sur ce lien pour voir le message : https://rtk-agency-v1-0.onrender.com/admin/'
-        mailContent = f"Bonjour,\n\n{fname} {lname} vient de vous envoyer un message via le site web.\n\n{link}"
+        mailContent = f"Bonjour,\n\n{fname} {lname} vient de vous envoyer un message via le site web.\n{link}"
         
         send_mail(
             "Notification - RTK Agency",
             mailContent,
             None,
-            ["ourobodiabdourakibou@gmail.com"],
+            ["bahm2062@gmail.com"],
             fail_silently=False,
         )
        

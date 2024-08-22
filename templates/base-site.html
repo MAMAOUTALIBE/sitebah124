@@ -58,12 +58,20 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
                     <ul class="navbar-nav">
-                        <!--<li class="menu-item-has-children current-menu-item">
-                            <a href="#">Home</a>
-                        </li> -->
                         <li><a href="{% url 'index' %}">Accueil</a></li>
-                        <li><a href="{% url 'about' %}">A propos</a></li>
-                        <li><a href="{% url 'events' %}">Evenements</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="#">A propos</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'about' %}">Qui somme nous</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                            <li class="menu-item-has-children">
+                                <a href="#">Actualités</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'news' %}">A la une</a></li>
+                                    <li><a href="{% url 'events' %}">Evénements</a></li>
+                                </ul>
+                            </li>
                         <!--- <li class="menu-item-has-children">
                             <a href="#">Contiributions</a>
                             <ul class="sub-menu">
@@ -71,7 +79,6 @@
                                 <li><a href="contribute-details.html">Contribute Details</a></li>
                             </ul>
                         </li> -->
-                        <li><a href="{% url 'news' %}">Actualités</a></li>
                         <!--<li class="menu-item-has-children">
                             <a href="#">News</a>
                             <ul class="sub-menu">
@@ -79,7 +86,6 @@
                                 <li><a href="news-details.html">News Details</a></li>
                             </ul>
                         </li>-->
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="nav-right-content">
