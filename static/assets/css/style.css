@@ -2864,7 +2864,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(22, 50, 122, 0.6);
+  
   z-index: -1;
 }
 .header-area .bg-img {
