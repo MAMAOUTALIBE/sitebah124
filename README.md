@@ -15,3 +15,4 @@ Blog web site
         -  python manage.py migrate
 
 -  lancer le projet : python manage.py runserver
+- verifier les migratio
